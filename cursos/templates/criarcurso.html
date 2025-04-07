@@ -14,10 +14,10 @@
       <!-- {%csrf_token%} = protecao contra ataques via form -->
       <form action="/curso/criar_curso/" method="POST" class="d-grid col-md-4 mx-auto"> {%csrf_token%}
          <label for="">Nome do curso:</label>
-         <input name="nome" type="text" class="form-control" placeholder="Digite o nome do curso">
+         <input name="nome" type="text" class="form-control" placeholder="Digite o nome do curso" required>
 
          <label for="">Carga horária: </label>
-         <input name="carga_horaria" type="number" class="form-control" placeholder="Ex: 40 ">
+         <input name="carga_horaria" type="number" class="form-control" placeholder="Ex: 40 " required>
 
          <button type="submit" class="btn btn-primary mt-2">Salvar</button>
          <a href="{% url 'listar_cursos' %}" class="btn btn-success mt-2">Voltar</a>
