@@ -18,7 +18,7 @@ gerar arquivo de dependencias
 
 video: https://www.youtube .com/watch?v=GfOg2hw1HYo&t=1318s
 
-a fazer: funcao cadastrar e editar
+a fazer: funcao cadastrar e edpitar
 
 
 

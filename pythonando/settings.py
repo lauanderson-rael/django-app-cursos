@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,14 +81,13 @@ WSGI_APPLICATION = 'pythonando.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 # banco de dados
 DATABASES = {
-      'default': {
+       'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'cursosdb_6hf9',
-        'USER': 'admin',
-        'PASSWORD': 'oqCZtnX7YFqC4hThnxjVDgA0dSzptj8D',
-        'HOST': 'dpg-cvpicfq4d50c73bprorg-a',
-        'PORT': '5432',
-
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
     }
 
    #  'default': {
