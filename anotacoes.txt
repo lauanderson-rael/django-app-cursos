@@ -1,0 +1,28 @@
+
+rodar projeto
+   python manage.py runserver
+
+criar uma tabeal no banco
+   criar a classe em models.py
+   python manage.py makemigrations
+   python manage.py migrate
+
+criar super usuario
+   podemos acessar e manipular as models logado em '/admin'
+   python manage.py createsuperuser
+
+gerar arquivo de dependencias
+   pip freeze > requirements.txt
+   settings.py -> ALLOWED_HOSTS = ["*"]
+
+
+video: https://www.youtube .com/watch?v=GfOg2hw1HYo&t=1318s
+
+a fazer: funcao cadastrar e editar
+
+
+
+
+rodando postgress da render no ambiente local
+   pip install psycopg2-binary
+   .env  -> DATABASE_URL=postgresql://admin:senha@host:porta/dbname

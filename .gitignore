@@ -1,0 +1,56 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__
+.pytest_cache/
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+*.sqlite3
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# Environments
+.env
+.venv
+venv/
+ENV/
+env/
+
+# Django migrations
+*/migrations/*
+
+# Static files
+/staticfiles/
+
+# Media files
+/media/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Django-sass-compiler
+.sass-cache/
+
+# Coverage reports
+.coverage
+.coverage.*
+
+# Pipenv
+Pipfile.lock
+
+# Caches
+.cache/
+
+# MySQL DB
+*.sql
+
+# Backup files
+*~
