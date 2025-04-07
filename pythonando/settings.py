@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'cursos'
+    'cursos',
+    'whitenoise.runserver_nostatic',  # config deploy render
 ]
 
 MIDDLEWARE = [
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+      'whitenoise.middleware.WhiteNoiseMiddleware', # config deploy render
 ]
 
 ROOT_URLCONF = 'pythonando.urls'
@@ -139,3 +141,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Diretório onde os arquiv
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# config deploy render - Isso garante que os arquivos estáticos sejam servidos corretamente
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
